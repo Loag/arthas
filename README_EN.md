@@ -4,15 +4,15 @@
 
 `Arthas` is an Java Diagnostic tool open sourced by Alibaba.
 
-Arthas can help developer trouble-shooting production issues for Java applications without modifying your code or restating your server.
+Arthas can help developers trouble-shoot production issues for Java applications without modifying your code or restating your server.
 
 ### Background
 
-In production system, sometimes the networks is unreachable from local development environment. If you encounter some issues in production system, it is impossible to use IDE to debug the application remotely. More importantly, debugging in production is unacceptable, because it will suspend all the threads, which leads to business unavailability. 
+In a production system, the network is sometimes unreachable from a local development environment. If you encounter some issues in a production system, it is impossible to use an IDE to debug the application remotely. More importantly, debugging in production is unacceptable, because it will suspend all the threads, which leads to business unavailability. 
 
-Some may think of reproducing the same issue on the test/staging environment, however, some tricky issue either can hardly be reproduced on a different environment, or even disappeared once restarted. 
+Some may think of reproducing the same issue on the test/staging environment, however, a tricky issue can be hard to reproduce on a different environment, or even disappear once restarted. 
 
-Thinking of adding some logs to your code? You have to go through test, staging, and then on to production. Time is money! That is a lot inefficient! Besides, the issue may not be reproducible once restart your JVM, as described above.
+Thinking of adding some logs to your code? You have to go through test, staging, and then on to production. Time is money! That is inefficient! Besides, the issue may not be reproducible once you restart JVM, as described above.
 
 Arthas is born to solve these issues. You can trouble-shoot your production issue on-the-fly. No JVM restart, no additional code changes. Arthas works as an observer, which will never suspend your existing threads.
 
